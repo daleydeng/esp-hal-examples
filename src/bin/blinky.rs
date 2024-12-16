@@ -13,19 +13,19 @@ use esp_println::println;
 fn main() -> ! {
     let peripherals = esp_hal::init(esp_hal::Config::default());
 
-    println!("Hello world!");
+    println!("Hello world123!");
 
     // Set GPIO7 as an output, and set its state high initially.
-    let mut led = Output::new(peripherals.GPIO8, Level::Low);
+    // let mut led = Output::new(peripherals.GPIO8, Level::Low);
 
-    led.set_high();
+    // led.set_high();
 
     // Initialize the Delay peripheral, and use it to toggle the LED state in a
     // loop.
     let delay = Delay::new();
 
     loop {
-        led.toggle();
+        // led.toggle();
         delay.delay_millis(500u32);
     }
 }
